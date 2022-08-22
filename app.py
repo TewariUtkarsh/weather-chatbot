@@ -17,7 +17,7 @@ mgr = owm.weather_manager()
 
 
 # Getting and sending response to dialogFlow
-@app.route('/webhook', methods=['POST', 'GET'])
+@app.route('/webhook', methods='POST')
 @cross_origin()
 def webhook():
     req = request.get_json(silent=True, force=True)
